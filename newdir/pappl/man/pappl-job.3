@@ -1,0 +1,715 @@
+.TH pappl-job 3 "pappl job functions" "2023-03-08" "pappl job functions"
+.SH NAME
+pappl-job \- pappl job functions
+.SH LIBRARY
+Printer Application Framework (libpappl, "pkg-config --cflags --libs pappl")
+.SH SYNOPSIS
+.B #include <pappl/pappl.h>
+.PP
+.I typedef struct _pappl_job_s
+.B pappl_job_t;
+.PP
+.I void
+.br
+.BI papplJobCancel "(pappl_job_t *job);"
+
+.PP
+.I bool
+.br
+.BI papplJobFilterImage "(pappl_job_t *job, pappl_device_t *device, pappl_joptions_t *options, const unsigned char *pixels, unsigned width, unsigned height, unsigned depth, bool smoothing);"
+
+.PP
+.I ipp_attribute_t	*
+.br
+.BI papplJobGetAttribute "(pappl_job_t *job, const char *name);"
+.PP
+.I void		*
+.br
+.BI papplJobGetData "(pappl_job_t *job);"
+.PP
+.I const char	*
+.br
+.BI papplJobGetFilename "(pappl_job_t *job);"
+.PP
+.I const char	*
+.br
+.BI papplJobGetFormat "(pappl_job_t *job);"
+.PP
+.I int
+.br
+.BI papplJobGetID "(pappl_job_t *job);"
+.PP
+.I int
+.br
+.BI papplJobGetImpressions "(pappl_job_t *job);"
+.PP
+.I int
+.br
+.BI papplJobGetImpressionsCompleted "(pappl_job_t *job);"
+.PP
+.I const char	*
+.br
+.BI papplJobGetMessage "(pappl_job_t *job);"
+.PP
+.I const char	*
+.br
+.BI papplJobGetName "(pappl_job_t *job);"
+.PP
+.I pappl_joptions_t	*
+.br
+.BI papplJobGetOptions "(pappl_job_t *job, pappl_joptions_t *options, unsigned num_pages, bool color);"
+.PP
+.I pappl_printer_t	*
+.br
+.BI papplJobGetPrinter "(pappl_job_t *job);"
+.PP
+.I pappl_jreason_t
+.br
+.BI papplJobGetReasons "(pappl_job_t *job);"
+.PP
+.I ipp_jstate_t
+.br
+.BI papplJobGetState "(pappl_job_t *job);"
+.PP
+.I time_t
+.br
+.BI papplJobGetTimeCompleted "(pappl_job_t *job);"
+.PP
+.I time_t
+.br
+.BI papplJobGetTimeCreated "(pappl_job_t *job);"
+.PP
+.I time_t
+.br
+.BI papplJobGetTimeProcessed "(pappl_job_t *job);"
+.PP
+.I const char	*
+.br
+.BI papplJobGetUsername "(pappl_job_t *job);"
+.PP
+.I bool
+.br
+.BI papplJobIsCanceled "(pappl_job_t *job);"
+
+.PP
+.I int
+.br
+.BI papplJobOpenFile "(pappl_job_t *job, char *fname, size_t fnamesize, const char *directory, const char *ext, const char *mode);"
+
+.PP
+.I void
+.br
+.BI papplJobSetData "(pappl_job_t *job, void *data);"
+.PP
+.I void
+.br
+.BI papplJobSetImpressions "(pappl_job_t *job, int impressions);"
+.PP
+.I void
+.br
+.BI papplJobSetImpressionsCompleted "(pappl_job_t *job, int add);"
+.PP
+.I void
+.br
+.BI papplJobSetMessage "(pappl_job_t *job, const char *message, ...);"
+.PP
+.I void
+.br
+.BI papplJobSetReasons "(pappl_job_t *job, pappl_jreason_t add, pappl_jreason_t remove);"
+
+.SH DESCRIPTION
+The
+.B PAPPL
+job functions provide access to the job object.
+Jobs and the life cycle of the
+.B pappl_job_t
+objects are managed automatically by the system object for the printer application.
+.PP
+The
+.B papplJobGet
+functions get the current values associated with a job while the
+.B papplJobSet
+functions set the current values associated with a job.
+.PP
+The
+.B papplJobCancel
+function cancels processing of a job, while the
+.B papplJobIsCanceled
+function returns whether a job is in the canceled state (\fIIPP_JSTATE_CANCELED\fR) or is in the process of being canceled (\fIIPP_JSTATE_PROCESSING\fR and \fIPAPPL_JREASON_PROCESSING_TO_STOP_POINT\fR).
+.PP
+The
+.B papplJobOpenFile
+function opens a file associated with the job.
+The file descriptor must be closed by the caller using the
+.BR close (2)
+system call.
+.PP
+The
+.B papplJobFilterImage
+function converts raw image data to raster data suitable for the printer.
+.SH ENUMERATIONS
+.SS pappl_jreason_e
+IPP "job-state-reasons" bit values
+.TP 5
+PAPPL_JREASON_ABORTED_BY_SYSTEM
+.br
+\'aborted-by-system'
+.TP 5
+PAPPL_JREASON_COMPRESSION_ERROR
+.br
+\'compression-error'
+.TP 5
+PAPPL_JREASON_DOCUMENT_FORMAT_ERROR
+.br
+\'document-format-error'
+.TP 5
+PAPPL_JREASON_DOCUMENT_PASSWORD_ERROR
+.br
+\'document-password-error'
+.TP 5
+PAPPL_JREASON_DOCUMENT_PERMISSION_ERROR
+.br
+\'document-permission-error'
+.TP 5
+PAPPL_JREASON_DOCUMENT_UNPRINTABLE_ERROR
+.br
+\'document-unprintable-error'
+.TP 5
+PAPPL_JREASON_ERRORS_DETECTED
+.br
+\'errors-detected'
+.TP 5
+PAPPL_JREASON_JOB_CANCELED_AT_DEVICE
+.br
+\'job-canceled-at-device'
+.TP 5
+PAPPL_JREASON_JOB_CANCELED_BY_USER
+.br
+\'job-canceled-by-user'
+.TP 5
+PAPPL_JREASON_JOB_COMPLETED_SUCCESSFULLY
+.br
+\'job-completed-successfully'
+.TP 5
+PAPPL_JREASON_JOB_COMPLETED_WITH_ERRORS
+.br
+\'job-completed-with-errors'
+.TP 5
+PAPPL_JREASON_JOB_COMPLETED_WITH_WARNINGS
+.br
+\'job-completed-with-warnings'
+.TP 5
+PAPPL_JREASON_JOB_DATA_INSUFFICIENT
+.br
+\'job-data-insufficient'
+.TP 5
+PAPPL_JREASON_JOB_HOLD_UNTIL_SPECIFIED
+.br
+\'job-hold-until-specified'
+.TP 5
+PAPPL_JREASON_JOB_INCOMING
+.br
+\'job-incoming'
+.TP 5
+PAPPL_JREASON_JOB_PRINTING
+.br
+\'job-printing'
+.TP 5
+PAPPL_JREASON_JOB_QUEUED
+.br
+\'job-queued'
+.TP 5
+PAPPL_JREASON_JOB_SPOOLING
+.br
+\'job-spooling'
+.TP 5
+PAPPL_JREASON_NONE
+.br
+\'none'
+.TP 5
+PAPPL_JREASON_PRINTER_STOPPED
+.br
+\'printer-stopped'
+.TP 5
+PAPPL_JREASON_PRINTER_STOPPED_PARTLY
+.br
+\'printer-stopped-partly'
+.TP 5
+PAPPL_JREASON_PROCESSING_TO_STOP_POINT
+.br
+\'processing-to-stop-point'
+.TP 5
+PAPPL_JREASON_QUEUED_IN_DEVICE
+.br
+\'queued-in-device'
+.TP 5
+PAPPL_JREASON_WARNINGS_DETECTED
+.br
+\'warnings-detected'
+.SH FUNCTIONS
+.SS papplJobCancel
+Cancel a job.
+.PP
+.nf
+void papplJobCancel (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function cancels the specified job.  If the job is currently being
+printed, it will be stopped at a convenient time (usually the end of a page)
+so that the printer will be left in a known state.
+.SS papplJobCreatePrintOptions
+Create the printer options for a job.
+.PP
+.nf
+pappl_pr_options_t * papplJobCreatePrintOptions (
+    pappl_job_t *job,
+    unsigned num_pages,
+    bool color
+);
+.fi
+.PP
+This function allocates a printer options structure and computes the print
+options for a job based upon the Job Template attributes submitted in the
+print request and the default values set in the printer driver data.
+.PP
+The "num_pages" and "color" arguments specify the number of pages and whether
+the document contains non-grayscale colors - this information typically comes
+from parsing the job file.
+.SS papplJobCreateWithFile
+Create a job with a local file.
+.PP
+.nf
+pappl_job_t * papplJobCreateWithFile (
+    pappl_printer_t *printer,
+    const char *username,
+    const char *format,
+    const char *job_name,
+    int num_options,
+    cups_option_t *options,
+    const char *filename
+);
+.fi
+.PP
+This function creates a new print job with a local file.  The "num_options"
+and "options" parameters specify additional print options, as needed.  The
+file specified by "filename" is removed automatically if it resides in the
+spool directory.
+.SS papplJobDeletePrintOptions
+Delete a job options structure.
+.PP
+.nf
+void papplJobDeletePrintOptions (
+    pappl_pr_options_t *options
+);
+.fi
+.PP
+This function frees the memory used for a job options structure.
+.SS papplJobFilterImage
+Filter an image in memory.
+.PP
+.nf
+bool  papplJobFilterImage (
+    pappl_job_t *job,
+    pappl_device_t *device,
+    pappl_pr_options_t *options,
+    const unsigned char *pixels,
+    int width,
+    int height,
+    int depth,
+    int ppi,
+    bool smoothing
+);
+.fi
+.PP
+This function will print a grayscale or sRGB image using the printer's raster
+driver interface, scaling and positioning the image as necessary based on
+the job options, and printing as many copies as requested.
+.PP
+The image data is an array of grayscale ("depth" = \fB1\fR) or sRGB
+("depth" = \fB3\fR) pixels starting at the top-left corner of the image.
+.PP
+The image resolution ("ppi") is expressed in pixels per inch and is used for
+some "print-scaling" modes.  Pass \fB0\fR if the image has no explicit resolution
+information.
+.SS papplJobGetAttribute
+Get an attribute from a job.
+.PP
+.nf
+ipp_attribute_t * papplJobGetAttribute (
+    pappl_job_t *job,
+    const char *name
+);
+.fi
+.PP
+This function gets the named IPP attribute from a job.  The returned
+attribute can be examined using the \fBippGetXxx\fR functions.
+.SS papplJobGetData
+Get per-job driver data.
+.PP
+.nf
+void * papplJobGetData (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the driver data associated with the job.  It is
+normally only called from drivers to maintain state for the processing of
+the job, for example to store bitmap compression information.
+.SS papplJobGetFilename
+Get the job's filename.
+.PP
+.nf
+const char * papplJobGetFilename (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the filename for the job's document data.
+.SS papplJobGetFormat
+Get the MIME media type for the job's file.
+.PP
+.nf
+const char * papplJobGetFormat (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the MIME media type for the job's document data.
+.SS papplJobGetID
+Get the job ID value.
+.PP
+.nf
+int  papplJobGetID (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the job's unique integer identifier.
+.SS papplJobGetImpressions
+Get the number of impressions (sides) in the job.
+.PP
+.nf
+int  papplJobGetImpressions (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the number of impressions in the job's document data.
+An impression is one side of an output page.
+.SS papplJobGetImpressionsCompleted
+Get the number of completed impressions
+                                      (sides) in the job.
+.PP
+.nf
+int  papplJobGetImpressionsCompleted (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the number of impressions that have been printed.  An
+impression is one side of an output page.
+.SS papplJobGetMessage
+Get the current job message string, if any.
+.PP
+.nf
+const char * papplJobGetMessage (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the current job message string, if any.
+.SS papplJobGetName
+Get the job name/title.
+.PP
+.nf
+const char * papplJobGetName (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the name or title of the job.
+.SS papplJobGetPrinter
+Get the printer for the job.
+.PP
+.nf
+pappl_printer_t * papplJobGetPrinter (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the printer containing the job.
+.SS papplJobGetReasons
+Get the current job state reasons.
+.PP
+.nf
+pappl_jreason_t  papplJobGetReasons (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the current job state reasons bitfield.
+.SS papplJobGetState
+Get the current job state.
+.PP
+.nf
+ipp_jstate_t  papplJobGetState (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the current job processing state, which is represented
+as an enumeration:
+.PP
+.IP \(bu 5
+\fBIPP_JSTATE_ABORTED\fR: Job has been aborted by the system due to an error.
+.IP \(bu 5
+\fBIPP_JSTATE_CANCELED\fR: Job has been canceled by a user.
+.IP \(bu 5
+\fBIPP_JSTATE_COMPLETED\fR: Job has finished printing.
+.IP \(bu 5
+\fBIPP_JSTATE_HELD\fR: Job is being held for some reason, typically because
+  the document data is being received.
+.IP \(bu 5
+\fBIPP_JSTATE_PENDING\fR: Job is queued and waiting to be printed.
+.IP \(bu 5
+\fBIPP_JSTATE_PROCESSING\fR: Job is being printed.
+.IP \(bu 5
+\fBIPP_JSTATE_STOPPED\fR: Job is paused, typically when the printer is not
+  ready.</li>
+</ul>
+.SS papplJobGetTimeCompleted
+Get the job completion time, if any.
+.PP
+.nf
+time_t  papplJobGetTimeCompleted (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the date and time when the job reached the completed,
+canceled, or aborted states.  \fB0\fR is returned if the job is not yet in one of
+those states.
+.SS papplJobGetTimeCreated
+Get the job creation time.
+.PP
+.nf
+time_t  papplJobGetTimeCreated (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the date and time when the job was created.
+.SS papplJobGetTimeProcessed
+Get the job processing time.
+.PP
+.nf
+time_t  papplJobGetTimeProcessed (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the date and time when the job started processing
+(printing).
+.SS papplJobGetUsername
+Get the name of the user that submitted the job.
+.PP
+.nf
+const char * papplJobGetUsername (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns the name of the user that submitted the job.
+.SS papplJobHold
+Hold a job for printing.
+.PP
+.nf
+bool  papplJobHold (
+    pappl_job_t *job,
+    const char *username,
+    const char *until,
+    time_t until_time
+);
+.fi
+.PP
+This function holds a pending job for printing at a later time.
+.SS papplJobIsCanceled
+Return whether the job is canceled.
+.PP
+.nf
+bool  papplJobIsCanceled (
+    pappl_job_t *job
+);
+.fi
+.PP
+This function returns \fBtrue\fR if the job has been canceled or aborted.
+.SS papplJobOpenFile
+Create or open a file for the document in a job.
+.PP
+.nf
+int  papplJobOpenFile (
+    pappl_job_t *job,
+    char *fname,
+    size_t fnamesize,
+    const char *directory,
+    const char *ext,
+    const char *mode
+);
+.fi
+.PP
+This function creates or opens a file for a job.  The "fname" and "fnamesize"
+arguments specify the location and size of a buffer to store the job
+filename, which incorporates the "directory", printer ID, job ID, job name
+(title), and "ext" values.  The job name is "sanitized" to only contain
+alphanumeric characters.
+.PP
+The "mode" argument is "r" to read an existing job file or "w" to write a
+new job file.  New files are created with restricted permissions for
+security purposes.
+.SS papplJobRelease
+Release a job for printing.
+.PP
+.nf
+bool  papplJobRelease (
+    pappl_job_t *job,
+    const char *username
+);
+.fi
+.PP
+This function releases a held job for printing.
+.SS papplJobRetain
+Retain a completed job until the specified time.
+.PP
+.nf
+bool  papplJobRetain (
+    pappl_job_t *job,
+    const char *username,
+    const char *until,
+    int until_interval,
+    time_t until_time
+);
+.fi
+.SS papplJobSetData
+Set the per-job driver data pointer.
+.PP
+.nf
+void papplJobSetData (
+    pappl_job_t *job,
+    void *data
+);
+.fi
+.PP
+This function sets the driver data for the specified job.  It is
+normally only called from drivers to maintain state for the processing of
+the job, for example to store bitmap compression information.
+.SS papplJobSetImpressions
+Set the number of impressions (sides) in a job.
+.PP
+.nf
+void papplJobSetImpressions (
+    pappl_job_t *job,
+    int impressions
+);
+.fi
+.PP
+This function sets the number of impressions in a job.  An impression is one
+side of an output page.
+.SS papplJobSetImpressionsCompleted
+Add completed impressions (sides) to
+                                      the job.
+.PP
+.nf
+void papplJobSetImpressionsCompleted (
+    pappl_job_t *job,
+    int add
+);
+.fi
+.PP
+This function updates the number of completed impressions in a job.  An
+impression is one side of an output page.
+.SS papplJobSetMessage
+Set the job message string.
+.PP
+.nf
+void papplJobSetMessage (
+    pappl_job_t *job,
+    const char *message,
+    ...
+);
+.fi
+.PP
+This function sets the job message string using a \fBprintf\fR-style format
+string.
+.PP
+.IP 5
+Note: The maximum length of the job message string is 1023 bytes.
+.SS papplJobSetReasons
+Set the job state reasons bit values.
+.PP
+.nf
+void papplJobSetReasons (
+    pappl_job_t *job,
+    pappl_jreason_t add,
+    pappl_jreason_t remove
+);
+.fi
+.PP
+This function updates the job state reasons bitfield.  The "remove" bits
+are cleared first, then the "add" bits are set.
+.SS papplPrinterFindJob
+Find a job.
+.PP
+.nf
+pappl_job_t * papplPrinterFindJob (
+    pappl_printer_t *printer,
+    int job_id
+);
+.fi
+.PP
+This function finds a job submitted to a printer using its integer ID value.
+.SS papplSystemCleanJobs
+Clean out old (completed) jobs.
+.PP
+.nf
+void papplSystemCleanJobs (
+    pappl_system_t *system
+);
+.fi
+.PP
+This function deletes all old (completed) jobs above the limit set by the
+\fIpapplPrinterSetMaxCompletedJobs\fR function.  The level may temporarily
+exceed this limit if the jobs were completed within the last 60 seconds.
+.PP
+.IP 5
+Note: This function is normally called automatically from the
+.IP 5
+\fIpapplSystemRun\fR function.
+.SH TYPES
+.SS pappl_jreason_t
+Bitfield for IPP "job-state-reasons" values
+.PP
+.nf
+typedef unsigned int pappl_jreason_t;
+.fi
+.SH SEE ALSO
+.BR pappl (1),
+.BR pappl-client (3),
+.BR pappl-device (3),
+.BR pappl-job (3),
+.BR pappl-log (3),
+.BR pappl-mainline (3),
+.BR pappl-makeresheader (1),
+.BR pappl-printer (3),
+.BR pappl-resource (3),
+.BR pappl-system (3),
+https://www.msweet.org/pappl
+.SH COPYRIGHT
+Copyright \[co] 2019-2022 by Michael R Sweet.
+.PP
+.B PAPPL
+is licensed under the Apache License Version 2.0 with an (optional) exception to allow linking against GPL2/LGPL2 software (like older versions of CUPS), so it can be used
+.I freely
+in any project you'd like.
+See the files "LICENSE" and "NOTICE" in the source distribution for more information.

@@ -1,0 +1,78 @@
+#
+# Make definitions for the Printer Application Framework
+#
+# Copyright © 2019-2022 by Michael R Sweet
+#
+# Licensed under Apache License v2.0.  See the file "LICENSE" for more
+# information.
+#
+
+# Be silent...
+.SILENT:
+
+
+# Version numbers...
+PAPPL_VERSION		=	@PAPPL_VERSION@
+PAPPL_VERSION_MAJOR	=	@PAPPL_VERSION_MAJOR@
+PAPPL_VERSION_MINOR	=	@PAPPL_VERSION_MINOR@
+
+
+# Programs and options...
+AR		=	@AR@
+ARFLAGS		=	@ARFLAGS@
+CC		=	@CC@
+CFLAGS		=	@CFLAGS@ $(CPPFLAGS) $(OPTIM) $(WARNINGS)
+CODE_SIGN	=	@CODE_SIGN@
+CODESIGN_IDENTITY =	-
+CPPFLAGS	=	-I.. @CPPFLAGS@
+CSFLAGS		=	-s "$(CODESIGN_IDENTITY)" @CSFLAGS@ --timestamp
+DSOFLAGS	=	@DSOFLAGS@ $(CFLAGS)
+INSTALL		=	@INSTALL@
+LDFLAGS		=	@LDFLAGS@ $(OPTIM)
+LIBS		=	@LIBS@
+LN		=	@LN@
+MKDIR           =       @MKDIR@ -p
+OPTIM		=	@OPTIM@
+RANLIB		=	@RANLIB@
+RM		=	@RM@ -f
+RMDIR		=	@RMDIR@
+SHELL		=	/bin/sh
+SYSTEM_STATUS	=	@SYSTEM_STATUS@
+WARNINGS	=	@WARNINGS@
+
+
+# Targets
+LIBPAPPL	=	@LIBPAPPL@
+LIBPAPPL_STATIC	=	@LIBPAPPL_STATIC@
+
+
+# Directories...
+bindir		=	@bindir@
+datadir		=	@datadir@
+datarootdir	=	@datarootdir@
+exec_prefix	=	@exec_prefix@
+includedir	=	@includedir@
+infodir		=	@infodir@
+libdir		=	@libdir@
+libexecdir	=	@libexecdir@
+localstatedir	=	@localstatedir@
+mandir		=	@mandir@
+oldincludedir	=	@oldincludedir@
+prefix		=	@prefix@
+sbindir		=	@sbindir@
+sharedstatedir	=	@sharedstatedir@
+srcdir		=	@srcdir@
+sysconfdir	=	@sysconfdir@
+top_srcdir	=	@top_srcdir@
+
+BUILDROOT	=	$(DSTROOT)$(RPM_BUILD_ROOT)$(DESTDIR)
+
+
+# Build commands...
+.SUFFIXES:	.c .h .m .o
+.c.o:
+	echo Compiling $<...
+	$(CC) $(CFLAGS) -c -o $@ $<
+.m.o:
+	echo Compiling $<...
+	$(CC) $(CFLAGS) -c -o $@ $<

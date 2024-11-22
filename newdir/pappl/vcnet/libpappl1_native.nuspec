@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>libpappl1_native</id>
+        <title>Printer Application Framework (PAPPL) for VS2019+</title>
+        <version>1.4.0.0</version>
+        <authors>Michael R Sweet</authors>
+        <owners>michaelrsweet</owners>
+        <projectUrl>https://github.com/michaelrsweet/pappl</projectUrl>
+        <license type="expression">Apache-2.0</license>
+        <icon>build/native/pappl-128.png</icon>
+	<readme>build/native/README.md</readme>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Printer Application Framework (PAPPL) for VS2019+</description>
+        <summary>PAPPL is a simple C-based framework/library for developing CUPS Printer
+Applications, which are the recommended replacement for printer drivers. PAPPL is licensed under the Apache License Version 2.0 with an exception to allow linking against GNU GPL2-only software.</summary>
+        <copyright>Copyright © 2019-2022 by Michael R Sweet</copyright>
+        <tags>airprint everywhere http ipp mopria native</tags>
+	<dependencies>
+	    <dependency id="libcups2_native" version="2.4.3.4" />
+	    <dependency id="libpappl1_native.redist" version="1.4.0.0" />
+	</dependencies>
+    </metadata>
+    <files>
+        <file src="..\doc\pappl-128.png" target="build\native" />
+        <file src="..\README.md" target="build\native" />
+        <file src="libpappl1_native.props" target="build\native" />
+        <file src="..\pappl\base.h" target="build\native\include\pappl" />
+        <file src="..\pappl\client.h" target="build\native\include\pappl" />
+        <file src="..\pappl\device.h" target="build\native\include\pappl" />
+        <file src="..\pappl\job.h" target="build\native\include\pappl" />
+        <file src="..\pappl\loc.h" target="build\native\include\pappl" />
+        <file src="..\pappl\log.h" target="build\native\include\pappl" />
+        <file src="..\pappl\mainloop.h" target="build\native\include\pappl" />
+        <file src="..\pappl\pappl.h" target="build\native\include\pappl" />
+        <file src="..\pappl\printer.h" target="build\native\include\pappl" />
+        <file src="..\pappl\subscription.h" target="build\native\include\pappl" />
+        <file src="..\pappl\system.h" target="build\native\include\pappl" />
+        <!--<file src="Win32\**\libpappl1.lib" target="build\native\lib\Win32" />-->
+        <file src="x64\**\libpappl1.lib" target="build\native\lib\x64" />
+    </files>
+</package>

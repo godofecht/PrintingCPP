@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="CjtTwM" name="radger" projectType="guiapp" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" cppLanguageStandard="17"
+              displaySplashScreen="1" version="1.0.0">
+  <MAINGROUP id="BwgCNo" name="radger">
+    <GROUP id="{7B22AE3A-09CF-B880-E22A-E7E0D1AE5BF7}" name="buzu">
+      <FILE id="OsUbtq" name="adminutil.c" compile="1" resource="0" file="../cups/cups/adminutil.c"/>
+      <FILE id="xJeKEr" name="array.c" compile="1" resource="0" file="../cups/cups/array.c"/>
+      <FILE id="Y18iMw" name="auth.c" compile="1" resource="0" file="../cups/cups/auth.c"/>
+      <FILE id="nxMf8M" name="backchannel.c" compile="1" resource="0" file="../cups/cups/backchannel.c"/>
+      <FILE id="SkXkOF" name="backend.c" compile="1" resource="0" file="../cups/cups/backend.c"/>
+      <FILE id="aZHNqE" name="debug.c" compile="1" resource="0" file="../cups/cups/debug.c"/>
+      <FILE id="mz04O0" name="dest.c" compile="1" resource="0" file="../cups/cups/dest.c"/>
+      <FILE id="HJAprp" name="dest-job.c" compile="1" resource="0" file="../cups/cups/dest-job.c"/>
+      <FILE id="J1eoeP" name="dir.c" compile="1" resource="0" file="../cups/cups/dir.c"/>
+      <FILE id="aR7uVv" name="encode.c" compile="1" resource="0" file="../cups/cups/encode.c"/>
+      <FILE id="xJ0ia5" name="file.c" compile="1" resource="0" file="../cups/cups/file.c"/>
+      <FILE id="H6rGGu" name="fuzzipp.c" compile="1" resource="0" file="../cups/cups/fuzzipp.c"/>
+      <FILE id="LVL4uj" name="getdevices.c" compile="1" resource="0" file="../cups/cups/getdevices.c"/>
+      <FILE id="vnSrVg" name="getifaddrs.c" compile="1" resource="0" file="../cups/cups/getifaddrs.c"/>
+      <FILE id="YZl13w" name="getputfile.c" compile="1" resource="0" file="../cups/cups/getputfile.c"/>
+      <FILE id="lszu6M" name="globals.c" compile="1" resource="0" file="../cups/cups/globals.c"/>
+      <FILE id="wc6tIX" name="hash.c" compile="1" resource="0" file="../cups/cups/hash.c"/>
+      <FILE id="drDNsD" name="http.c" compile="1" resource="0" file="../cups/cups/http.c"/>
+      <FILE id="YBJmke" name="http-addr.c" compile="1" resource="0" file="../cups/cups/http-addr.c"/>
+      <FILE id="d3w1cg" name="http-support.c" compile="1" resource="0" file="../cups/cups/http-support.c"/>
+      <FILE id="Mby371" name="ipp.c" compile="1" resource="0" file="../cups/cups/ipp.c"/>
+      <FILE id="dKUSOD" name="ipp-file.c" compile="1" resource="0" file="../cups/cups/ipp-file.c"/>
+      <FILE id="Nd8ISK" name="ipp-support.c" compile="1" resource="0" file="../cups/cups/ipp-support.c"/>
+      <FILE id="EvLWxL" name="ipp-vars.c" compile="1" resource="0" file="../cups/cups/ipp-vars.c"/>
+      <FILE id="ewHXsg" name="langprintf.c" compile="1" resource="0" file="../cups/cups/langprintf.c"/>
+      <FILE id="hlvR7L" name="language.c" compile="1" resource="0" file="../cups/cups/language.c"/>
+      <FILE id="RLMXCJ" name="md5.c" compile="1" resource="0" file="../cups/cups/md5.c"/>
+      <FILE id="wEW1Ns" name="md5passwd.c" compile="1" resource="0" file="../cups/cups/md5passwd.c"/>
+      <FILE id="Xwx1Ly" name="notify.c" compile="1" resource="0" file="../cups/cups/notify.c"/>
+      <FILE id="XNMldt" name="options.c" compile="1" resource="0" file="../cups/cups/options.c"/>
+      <FILE id="SozpEC" name="ppd.c" compile="1" resource="0" file="../cups/cups/ppd.c"/>
+      <FILE id="tYWcrx" name="ppd-attr.c" compile="1" resource="0" file="../cups/cups/ppd-attr.c"/>
+      <FILE id="XNYJdH" name="ppd-cache.c" compile="1" resource="0" file="../cups/cups/ppd-cache.c"/>
+      <FILE id="L52CXu" name="ppd-conflicts.c" compile="1" resource="0" file="../cups/cups/ppd-conflicts.c"/>
+      <FILE id="tRRN5y" name="ppd-custom.c" compile="1" resource="0" file="../cups/cups/ppd-custom.c"/>
+      <FILE id="KAqeiw" name="ppd-emit.c" compile="1" resource="0" file="../cups/cups/ppd-emit.c"/>
+      <FILE id="XrsSi6" name="ppd-localize.c" compile="1" resource="0" file="../cups/cups/ppd-localize.c"/>
+      <FILE id="YXn0fK" name="ppd-mark.c" compile="1" resource="0" file="../cups/cups/ppd-mark.c"/>
+      <FILE id="It1OXc" name="ppd-page.c" compile="1" resource="0" file="../cups/cups/ppd-page.c"/>
+      <FILE id="pD2DED" name="ppd-util.c" compile="1" resource="0" file="../cups/cups/ppd-util.c"/>
+      <FILE id="TdPHD5" name="pwg-media.c" compile="1" resource="0" file="../cups/cups/pwg-media.c"/>
+      <FILE id="yD1gva" name="rasterbench.c" compile="1" resource="0" file="../cups/cups/rasterbench.c"/>
+      <FILE id="WoFtrT" name="raster-error.c" compile="1" resource="0" file="../cups/cups/raster-error.c"/>
+      <FILE id="FQNH3B" name="raster-interpret.c" compile="1" resource="0"
+            file="../cups/cups/raster-interpret.c"/>
+      <FILE id="kp9nKF" name="raster-interstub.c" compile="1" resource="0"
+            file="../cups/cups/raster-interstub.c"/>
+      <FILE id="n0lGmM" name="raster-stream.c" compile="1" resource="0" file="../cups/cups/raster-stream.c"/>
+      <FILE id="lGjsDV" name="raster-stubs.c" compile="1" resource="0" file="../cups/cups/raster-stubs.c"/>
+      <FILE id="OGKacN" name="request.c" compile="1" resource="0" file="../cups/cups/request.c"/>
+      <FILE id="xc0ogo" name="sidechannel.c" compile="1" resource="0" file="../cups/cups/sidechannel.c"/>
+      <FILE id="WHBFHd" name="snmp.c" compile="1" resource="0" file="../cups/cups/snmp.c"/>
+      <FILE id="DJB27z" name="snprintf.c" compile="1" resource="0" file="../cups/cups/snprintf.c"/>
+      <FILE id="B6UBHJ" name="string.c" compile="1" resource="0" file="../cups/cups/string.c"/>
+      <FILE id="brI7Ng" name="tempfile.c" compile="1" resource="0" file="../cups/cups/tempfile.c"/>
+      <FILE id="F3sJia" name="testadmin.c" compile="1" resource="0" file="../cups/cups/testadmin.c"/>
+      <FILE id="vXRffH" name="testarray.c" compile="1" resource="0" file="../cups/cups/testarray.c"/>
+      <FILE id="tOgDju" name="testcache.c" compile="1" resource="0" file="../cups/cups/testcache.c"/>
+      <FILE id="KaBNgk" name="testclient.c" compile="1" resource="0" file="../cups/cups/testclient.c"/>
+      <FILE id="PuhXoo" name="testconflicts.c" compile="1" resource="0" file="../cups/cups/testconflicts.c"/>
+      <FILE id="Zj9bqu" name="testcreds.c" compile="1" resource="0" file="../cups/cups/testcreds.c"/>
+      <FILE id="KZ5TEc" name="testcups.c" compile="1" resource="0" file="../cups/cups/testcups.c"/>
+      <FILE id="T6EynB" name="testdest.c" compile="1" resource="0" file="../cups/cups/testdest.c"/>
+      <FILE id="XcHQuW" name="testfile.c" compile="1" resource="0" file="../cups/cups/testfile.c"/>
+      <FILE id="syKrAW" name="testgetdests.c" compile="1" resource="0" file="../cups/cups/testgetdests.c"/>
+      <FILE id="zlrNQ4" name="testhttp.c" compile="1" resource="0" file="../cups/cups/testhttp.c"/>
+      <FILE id="oY6ZBd" name="testi18n.c" compile="1" resource="0" file="../cups/cups/testi18n.c"/>
+      <FILE id="qn8Wr7" name="testipp.c" compile="1" resource="0" file="../cups/cups/testipp.c"/>
+      <FILE id="xIHWgw" name="testlang.c" compile="1" resource="0" file="../cups/cups/testlang.c"/>
+      <FILE id="NmuVSn" name="testoptions.c" compile="1" resource="0" file="../cups/cups/testoptions.c"/>
+      <FILE id="GoUD0a" name="testppd.c" compile="1" resource="0" file="../cups/cups/testppd.c"/>
+      <FILE id="B6ZrGs" name="testpwg.c" compile="1" resource="0" file="../cups/cups/testpwg.c"/>
+      <FILE id="PRQfC8" name="testraster.c" compile="1" resource="0" file="../cups/cups/testraster.c"/>
+      <FILE id="yJEH1T" name="testsnmp.c" compile="1" resource="0" file="../cups/cups/testsnmp.c"/>
+      <FILE id="zILmXz" name="testthreads.c" compile="1" resource="0" file="../cups/cups/testthreads.c"/>
+      <FILE id="e6A6Qq" name="thread.c" compile="1" resource="0" file="../cups/cups/thread.c"/>
+      <FILE id="Cdf36H" name="tls.c" compile="1" resource="0" file="../cups/cups/tls.c"/>
+      <FILE id="heukw4" name="tlscheck.c" compile="1" resource="0" file="../cups/cups/tlscheck.c"/>
+      <FILE id="q0R15Z" name="tls-darwin.c" compile="1" resource="0" file="../cups/cups/tls-darwin.c"/>
+      <FILE id="Lx7ZgB" name="tls-gnutls.c" compile="1" resource="0" file="../cups/cups/tls-gnutls.c"/>
+      <FILE id="q18f7e" name="tls-openssl.c" compile="1" resource="0" file="../cups/cups/tls-openssl.c"/>
+      <FILE id="NMNWjF" name="tls-sspi.c" compile="1" resource="0" file="../cups/cups/tls-sspi.c"/>
+      <FILE id="nJa46o" name="transcode.c" compile="1" resource="0" file="../cups/cups/transcode.c"/>
+      <FILE id="tdjwJ1" name="usersys.c" compile="1" resource="0" file="../cups/cups/usersys.c"/>
+      <FILE id="ULatJW" name="util.c" compile="1" resource="0" file="../cups/cups/util.c"/>
+    </GROUP>
+    <GROUP id="{02B4787F-F486-5E2F-E42C-19F3F8EEFB67}" name="Source">
+      <FILE id="AWZ2yn" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="IuAtk1" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="LXxjOf" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+    </GROUP>
+    <GROUP id="{EA938F0C-C4EA-83AC-4632-095C5E7DAF19}" name="Screens">
+      <FILE id="o2H8ES" name="EditTagComponent.h" compile="0" resource="0"
+            file="Source/Screens/EditTagComponent.h"/>
+      <FILE id="KD00mI" name="GeneralLabelComponent.h" compile="0" resource="0"
+            file="Source/Screens/GeneralLabelComponent.h"/>
+      <FILE id="PPiHL8" name="LabelGenerator.h" compile="0" resource="0"
+            file="Source/Screens/LabelGenerator.h"/>
+      <GROUP id="{49CDED48-7FBF-1FC6-31FA-BC5FE8274601}" name="lprint">
+        <GROUP id="{A21811F5-F03D-0DF9-4F09-CB6FD0431F0A}" name="macos-scripts">
+          <FILE id="tYJUPx" name="postinstall" compile="0" resource="1" file="Source/Screens/lprint/macos-scripts/postinstall"/>
+        </GROUP>
+        <GROUP id="{FBF6DE64-5299-AD94-C30C-332C9EBDE7B2}" name="man">
+          <FILE id="V809Pr" name="lprint-add.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-add.1"/>
+          <FILE id="KJAnWm" name="lprint-cancel.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-cancel.1"/>
+          <FILE id="vMZkOB" name="lprint-default.1" compile="0" resource="1"
+                file="Source/Screens/lprint/man/lprint-default.1"/>
+          <FILE id="hsjoyz" name="lprint-delete.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-delete.1"/>
+          <FILE id="hxweGU" name="lprint-devices.1" compile="0" resource="1"
+                file="Source/Screens/lprint/man/lprint-devices.1"/>
+          <FILE id="KfRJlq" name="lprint-drivers.1" compile="0" resource="1"
+                file="Source/Screens/lprint/man/lprint-drivers.1"/>
+          <FILE id="ZnvRcg" name="lprint-jobs.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-jobs.1"/>
+          <FILE id="IhZ6Z7" name="lprint-modify.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-modify.1"/>
+          <FILE id="KXgcKS" name="lprint-options.1" compile="0" resource="1"
+                file="Source/Screens/lprint/man/lprint-options.1"/>
+          <FILE id="MxU1nR" name="lprint-printers.1" compile="0" resource="1"
+                file="Source/Screens/lprint/man/lprint-printers.1"/>
+          <FILE id="Ti7M2b" name="lprint-server.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-server.1"/>
+          <FILE id="B1hWb0" name="lprint-shutdown.1" compile="0" resource="1"
+                file="Source/Screens/lprint/man/lprint-shutdown.1"/>
+          <FILE id="JJ0T9S" name="lprint-status.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-status.1"/>
+          <FILE id="IyT9QJ" name="lprint-submit.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint-submit.1"/>
+          <FILE id="q0gxfm" name="lprint.1" compile="0" resource="1" file="Source/Screens/lprint/man/lprint.1"/>
+          <FILE id="bRFlm0" name="lprint.conf.5" compile="0" resource="1" file="Source/Screens/lprint/man/lprint.conf.5"/>
+        </GROUP>
+        <GROUP id="{68B4827A-5AE2-EB74-314C-9BEC3D63E5D6}" name="snap">
+          <GROUP id="{F9CC40D5-8E18-7E6D-BEC9-30B5E8D754C4}" name="hooks">
+            <FILE id="pK8PU1" name="configure" compile="0" resource="1" file="Source/Screens/lprint/snap/hooks/configure"/>
+          </GROUP>
+          <GROUP id="{43E71A7A-A2D9-8DC1-DA95-7BAA21C7AC49}" name="scripts">
+            <FILE id="UvjGjC" name="lprint-server" compile="0" resource="1" file="Source/Screens/lprint/snap/scripts/lprint-server"/>
+          </GROUP>
+          <FILE id="YOPMEi" name="snapcraft.yaml" compile="0" resource="1" file="Source/Screens/lprint/snap/snapcraft.yaml"/>
+        </GROUP>
+        <GROUP id="{6288C5E3-50D5-5F11-6654-1B55492EBCCA}" name="static-resources">
+          <FILE id="DxZyas" name="lprint-de-strings.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-de-strings.h"/>
+          <FILE id="XdoEbw" name="lprint-de.strings" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-de.strings"/>
+          <FILE id="t3hh1u" name="lprint-en-strings.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-en-strings.h"/>
+          <FILE id="aTrlWB" name="lprint-en.strings" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-en.strings"/>
+          <FILE id="ZvJc6Z" name="lprint-es-strings.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-es-strings.h"/>
+          <FILE id="NMXjVz" name="lprint-es.strings" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-es.strings"/>
+          <FILE id="zt1vBF" name="lprint-fr-strings.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-fr-strings.h"/>
+          <FILE id="njhbcI" name="lprint-fr.strings" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-fr.strings"/>
+          <FILE id="Mvoz8q" name="lprint-it-strings.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-it-strings.h"/>
+          <FILE id="J3jnxK" name="lprint-it.strings" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-it.strings"/>
+          <FILE id="iJ3sUT" name="lprint-large-png.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-large-png.h"/>
+          <FILE id="zSu70D" name="lprint-large.png" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-large.png"/>
+          <FILE id="GwvZmP" name="lprint-png.h" compile="0" resource="0" file="Source/Screens/lprint/static-resources/lprint-png.h"/>
+          <FILE id="FYYYD1" name="lprint-small-png.h" compile="0" resource="0"
+                file="Source/Screens/lprint/static-resources/lprint-small-png.h"/>
+          <FILE id="lnRvVf" name="lprint-small.png" compile="0" resource="1"
+                file="Source/Screens/lprint/static-resources/lprint-small.png"/>
+          <FILE id="Nq7nqg" name="lprint.png" compile="0" resource="1" file="Source/Screens/lprint/static-resources/lprint.png"/>
+        </GROUP>
+        <GROUP id="{8D75F9FD-EC85-61FA-9826-C74DE009D9B5}" name="testsuite">
+          <FILE id="csnjuE" name="bad-label.pwg" compile="0" resource="1" file="Source/Screens/lprint/testsuite/bad-label.pwg"/>
+          <FILE id="T3nOoi" name="complex-label.pwg" compile="0" resource="1"
+                file="Source/Screens/lprint/testsuite/complex-label.pwg"/>
+          <FILE id="q8wKKs" name="sample-label.pwg" compile="0" resource="1"
+                file="Source/Screens/lprint/testsuite/sample-label.pwg"/>
+        </GROUP>
+        <FILE id="d1uCZR" name="CHANGES.md" compile="0" resource="1" file="Source/Screens/lprint/CHANGES.md"/>
+        <FILE id="kQQpKi" name="config.guess" compile="0" resource="1" file="Source/Screens/lprint/config.guess"/>
+        <FILE id="lYGN0Z" name="config.h" compile="0" resource="0" file="Source/Screens/lprint/config.h"/>
+        <FILE id="SbnU34" name="config.sub" compile="0" resource="1" file="Source/Screens/lprint/config.sub"/>
+        <FILE id="KME8ER" name="configure" compile="0" resource="1" file="Source/Screens/lprint/configure"/>
+        <FILE id="WOToea" name="configure.ac" compile="0" resource="1" file="Source/Screens/lprint/configure.ac"/>
+        <FILE id="ukvD60" name="CONTRIBUTING.md" compile="0" resource="1" file="Source/Screens/lprint/CONTRIBUTING.md"/>
+        <FILE id="Ocq4Yr" name="DOCUMENTATION.md" compile="0" resource="1"
+              file="Source/Screens/lprint/DOCUMENTATION.md"/>
+        <FILE id="xsWaPb" name="install-sh" compile="0" resource="1" file="Source/Screens/lprint/install-sh"/>
+        <FILE id="xPMU26" name="LICENSE" compile="0" resource="1" file="Source/Screens/lprint/LICENSE"/>
+        <FILE id="oAMSlr" name="lprint-common.c" compile="1" resource="0" file="Source/Screens/lprint/lprint-common.c"/>
+        <FILE id="lKEVdn" name="lprint-dymo.c" compile="1" resource="0" file="Source/Screens/lprint/lprint-dymo.c"/>
+        <FILE id="TXE6Lz" name="lprint-dymo.h" compile="0" resource="0" file="Source/Screens/lprint/lprint-dymo.h"
+              xcodeResource="0"/>
+        <FILE id="Imquj9" name="lprint-epl2.c" compile="1" resource="0" file="Source/Screens/lprint/lprint-epl2.c"/>
+        <FILE id="keIm63" name="lprint-epl2.h" compile="0" resource="0" file="Source/Screens/lprint/lprint-epl2.h"/>
+        <FILE id="hZAPoe" name="lprint-testpage.c" compile="0" resource="0"
+              file="Source/Screens/lprint/lprint-testpage.c"/>
+        <FILE id="k0Tk3s" name="lprint-zpl.c" compile="1" resource="0" file="Source/Screens/lprint/lprint-zpl.c"/>
+        <FILE id="fTATKL" name="lprint-zpl.h" compile="0" resource="0" file="Source/Screens/lprint/lprint-zpl.h"/>
+        <FILE id="Lfrv6i" name="lprint.c" compile="0" resource="0" file="Source/Screens/lprint/lprint.c"/>
+        <FILE id="iCRMSi" name="lprint.h" compile="0" resource="0" file="Source/Screens/lprint/lprint.h"/>
+        <FILE id="nfG6az" name="lprint.service.in" compile="0" resource="1"
+              file="Source/Screens/lprint/lprint.service.in"/>
+        <FILE id="YNHJmq" name="lprint.spec" compile="0" resource="1" file="Source/Screens/lprint/lprint.spec"/>
+        <FILE id="jjQRil" name="testdither.c" compile="0" resource="0" file="Source/Screens/lprint/testdither.c"/>
+      </GROUP>
+      <FILE id="zOgY4I" name="LabelPreviewComponent.h" compile="0" resource="0"
+            file="Source/Screens/LabelPreviewComponent.h"/>
+      <FILE id="SYlSSj" name="NameBadgeComponent.h" compile="0" resource="0"
+            file="Source/Screens/NameBadgeComponent.h"/>
+      <FILE id="rqS778" name="StorageLabelComponent.h" compile="0" resource="0"
+            file="Source/Screens/StorageLabelComponent.h"/>
+      <FILE id="ipsGZw" name="TabManager.h" compile="0" resource="0" file="Source/Screens/TabManager.h"/>
+      <FILE id="rwaRM4" name="TextAggregatorComponent.h" compile="0" resource="0"
+            file="Source/Screens/TextAggregatorComponent.h"/>
+      <GROUP id="{9C72AE96-96ED-BE8E-4F78-65DE92791B53}" name="cups">
+        <GROUP id="{FB6B1255-3E93-9230-CE4B-C381F8787A24}" name="json-afl-in">
+          <FILE id="HmNltl" name="rfc7517-3.json" compile="0" resource="1" file="../libcups/cups/json-afl-in/rfc7517-3.json"/>
+          <FILE id="dDqkCU" name="rfc7517-a.1.json" compile="0" resource="1"
+                file="../libcups/cups/json-afl-in/rfc7517-a.1.json"/>
+          <FILE id="CjOUu4" name="rfc7517-a.2.json" compile="0" resource="1"
+                file="../libcups/cups/json-afl-in/rfc7517-a.2.json"/>
+          <FILE id="YdZsFW" name="rfc7517-a.3.json" compile="0" resource="1"
+                file="../libcups/cups/json-afl-in/rfc7517-a.3.json"/>
+          <FILE id="YWAVmL" name="rfc7517-b.json" compile="0" resource="1" file="../libcups/cups/json-afl-in/rfc7517-b.json"/>
+          <FILE id="sLBdZE" name="rfc7517-c.1.json" compile="0" resource="1"
+                file="../libcups/cups/json-afl-in/rfc7517-c.1.json"/>
+          <FILE id="f0MRhc" name="rfc7517-c.2.json" compile="0" resource="1"
+                file="../libcups/cups/json-afl-in/rfc7517-c.2.json"/>
+          <FILE id="aQvOcJ" name="rfc7519-3.1.json" compile="0" resource="1"
+                file="../libcups/cups/json-afl-in/rfc7519-3.1.json"/>
+          <FILE id="yMNj1F" name="rfc7519-6.1a.json" compile="0" resource="1"
+                file="../libcups/cups/json-afl-in/rfc7519-6.1a.json"/>
+          <FILE id="ntitsZ" name="rfc7519-6.1b.json" compile="0" resource="1"
+                file="../libcups/cups/json-afl-in/rfc7519-6.1b.json"/>
+          <FILE id="oo30tF" name="rfc7519-a.1.json" compile="0" resource="1"
+                file="../libcups/cups/json-afl-in/rfc7519-a.1.json"/>
+        </GROUP>
+        <GROUP id="{7B671473-F9FD-7034-75FB-7D90C76C61D7}" name="strings">
+          <FILE id="dLzGIG" name="ca.strings" compile="0" resource="1" file="../libcups/cups/strings/ca.strings"/>
+          <FILE id="hBdBgf" name="ca_strings.h" compile="0" resource="0" file="../libcups/cups/strings/ca_strings.h"/>
+          <FILE id="AL92SM" name="cs.strings" compile="0" resource="1" file="../libcups/cups/strings/cs.strings"/>
+          <FILE id="XweSj4" name="cs_strings.h" compile="0" resource="0" file="../libcups/cups/strings/cs_strings.h"/>
+          <FILE id="fkCldR" name="da.strings" compile="0" resource="1" file="../libcups/cups/strings/da.strings"/>
+          <FILE id="BZNqdj" name="da_strings.h" compile="0" resource="0" file="../libcups/cups/strings/da_strings.h"/>
+          <FILE id="FToC1A" name="de.strings" compile="0" resource="1" file="../libcups/cups/strings/de.strings"/>
+          <FILE id="l02DNL" name="de_strings.h" compile="0" resource="0" file="../libcups/cups/strings/de_strings.h"/>
+          <FILE id="FUGCaI" name="en.strings" compile="0" resource="1" file="../libcups/cups/strings/en.strings"/>
+          <FILE id="PKE3QF" name="en_strings.h" compile="0" resource="0" file="../libcups/cups/strings/en_strings.h"/>
+          <FILE id="V49QQG" name="es.strings" compile="0" resource="1" file="../libcups/cups/strings/es.strings"/>
+          <FILE id="QoN9Hd" name="es_strings.h" compile="0" resource="0" file="../libcups/cups/strings/es_strings.h"/>
+          <FILE id="qZrVbZ" name="fr.strings" compile="0" resource="1" file="../libcups/cups/strings/fr.strings"/>
+          <FILE id="efzKcZ" name="fr_strings.h" compile="0" resource="0" file="../libcups/cups/strings/fr_strings.h"/>
+          <FILE id="EEW4AL" name="it.strings" compile="0" resource="1" file="../libcups/cups/strings/it.strings"/>
+          <FILE id="bRiUHc" name="it_strings.h" compile="0" resource="0" file="../libcups/cups/strings/it_strings.h"/>
+          <FILE id="BHh7iX" name="ja.strings" compile="0" resource="1" file="../libcups/cups/strings/ja.strings"/>
+          <FILE id="pminQ2" name="ja_strings.h" compile="0" resource="0" file="../libcups/cups/strings/ja_strings.h"/>
+          <FILE id="hrKXwD" name="pt_BR.strings" compile="0" resource="1" file="../libcups/cups/strings/pt_BR.strings"/>
+          <FILE id="gdFI92" name="pt_BR_strings.h" compile="0" resource="0" file="../libcups/cups/strings/pt_BR_strings.h"/>
+          <FILE id="ItbwuX" name="ru.strings" compile="0" resource="1" file="../libcups/cups/strings/ru.strings"/>
+          <FILE id="lcZL4h" name="ru_strings.h" compile="0" resource="0" file="../libcups/cups/strings/ru_strings.h"/>
+          <FILE id="R68565" name="zh_CN.strings" compile="0" resource="1" file="../libcups/cups/strings/zh_CN.strings"/>
+          <FILE id="BIBmK4" name="zh_CN_strings.h" compile="0" resource="0" file="../libcups/cups/strings/zh_CN_strings.h"/>
+        </GROUP>
+        <FILE id="ETTy0r" name="array.c" compile="1" resource="0" file="../libcups/cups/array.c"/>
+        <FILE id="B1WmG3" name="array.h" compile="0" resource="0" file="../libcups/cups/array.h"/>
+        <FILE id="KIFBVC" name="auth.c" compile="1" resource="0" file="../libcups/cups/auth.c"/>
+        <FILE id="d3SsU3" name="base.h" compile="0" resource="0" file="../libcups/cups/base.h"/>
+        <FILE id="kAM5un" name="base.strings" compile="0" resource="1" file="../libcups/cups/base.strings"/>
+        <FILE id="RpPEqq" name="cups-private.h" compile="0" resource="0" file="../libcups/cups/cups-private.h"/>
+        <FILE id="nC4Twx" name="cups.h" compile="0" resource="0" file="../libcups/cups/cups.h"/>
+        <FILE id="dZbB2Q" name="cupspm-icon.png" compile="0" resource="1" file="../libcups/cups/cupspm-icon.png"/>
+        <FILE id="GCXRRG" name="cupspm.md" compile="0" resource="1" file="../libcups/cups/cupspm.md"/>
+        <FILE id="GMgeBU" name="cupspm.opacity" compile="0" resource="1" file="../libcups/cups/cupspm.opacity"/>
+        <FILE id="Y9rI5o" name="cupspm.png" compile="0" resource="1" file="../libcups/cups/cupspm.png"/>
+        <FILE id="rd4Y7v" name="debug-internal.h" compile="0" resource="0"
+              file="../libcups/cups/debug-internal.h"/>
+        <FILE id="FXTD7X" name="debug-private.h" compile="0" resource="0" file="../libcups/cups/debug-private.h"/>
+        <FILE id="NPxyjG" name="debug.c" compile="1" resource="0" file="../libcups/cups/debug.c"/>
+        <FILE id="TptOpv" name="Dependencies" compile="0" resource="1" file="../libcups/cups/Dependencies"/>
+        <FILE id="BaW9XO" name="dest-job.c" compile="1" resource="0" file="../libcups/cups/dest-job.c"/>
+        <FILE id="tccVB4" name="dest-localization.c" compile="1" resource="0"
+              file="../libcups/cups/dest-localization.c"/>
+        <FILE id="gM3Q5T" name="dest-options.c" compile="1" resource="0" file="../libcups/cups/dest-options.c"/>
+        <FILE id="dCA3N9" name="dest.c" compile="1" resource="0" file="../libcups/cups/dest.c"/>
+        <FILE id="GNPP3o" name="dir.c" compile="1" resource="0" file="../libcups/cups/dir.c"/>
+        <FILE id="YDUlcG" name="dir.h" compile="0" resource="0" file="../libcups/cups/dir.h"/>
+        <FILE id="y1fWhY" name="dnssd.c" compile="1" resource="0" file="../libcups/cups/dnssd.c"/>
+        <FILE id="SpjakH" name="dnssd.h" compile="0" resource="0" file="../libcups/cups/dnssd.h"/>
+        <FILE id="G29p5u" name="encode.c" compile="1" resource="0" file="../libcups/cups/encode.c"/>
+        <FILE id="OJ63cX" name="file-private.h" compile="0" resource="0" file="../libcups/cups/file-private.h"/>
+        <FILE id="N2YwKE" name="file.c" compile="1" resource="0" file="../libcups/cups/file.c"/>
+        <FILE id="Z3vzKt" name="file.h" compile="0" resource="0" file="../libcups/cups/file.h"/>
+        <FILE id="RJZY7h" name="form.c" compile="1" resource="0" file="../libcups/cups/form.c"/>
+        <FILE id="FeAJOm" name="form.h" compile="0" resource="0" file="../libcups/cups/form.h"/>
+        <FILE id="J1yTcs" name="fuzzipp.c" compile="1" resource="0" file="../libcups/cups/fuzzipp.c"/>
+        <FILE id="PwEvh7" name="getputfile.c" compile="1" resource="0" file="../libcups/cups/getputfile.c"/>
+        <FILE id="NtRYfu" name="globals.c" compile="1" resource="0" file="../libcups/cups/globals.c"/>
+        <FILE id="NMDTXg" name="hash.c" compile="1" resource="0" file="../libcups/cups/hash.c"/>
+        <FILE id="DjlS60" name="http-addr.c" compile="1" resource="0" file="../libcups/cups/http-addr.c"/>
+        <FILE id="hT9l5d" name="http-addrlist.c" compile="1" resource="0" file="../libcups/cups/http-addrlist.c"/>
+        <FILE id="aKqMrD" name="http-private.h" compile="0" resource="0" file="../libcups/cups/http-private.h"/>
+        <FILE id="ytl02f" name="http-support.c" compile="1" resource="0" file="../libcups/cups/http-support.c"/>
+        <FILE id="nsww1M" name="http.c" compile="1" resource="0" file="../libcups/cups/http.c"/>
+        <FILE id="FD3YNd" name="http.h" compile="0" resource="0" file="../libcups/cups/http.h"/>
+        <FILE id="EvtsTT" name="ipp-file.c" compile="1" resource="0" file="../libcups/cups/ipp-file.c"/>
+        <FILE id="RsfsYe" name="ipp-private.h" compile="0" resource="0" file="../libcups/cups/ipp-private.h"/>
+        <FILE id="IGcVvt" name="ipp-support.c" compile="1" resource="0" file="../libcups/cups/ipp-support.c"/>
+        <FILE id="cHRAhB" name="ipp.c" compile="1" resource="0" file="../libcups/cups/ipp.c"/>
+        <FILE id="G8F3S4" name="ipp.h" compile="0" resource="0" file="../libcups/cups/ipp.h"/>
+        <FILE id="xZbSBb" name="ipp.strings" compile="0" resource="1" file="../libcups/cups/ipp.strings"/>
+        <FILE id="s7A3fq" name="json-private.h" compile="0" resource="0" file="../libcups/cups/json-private.h"/>
+        <FILE id="OtRRK6" name="json.c" compile="1" resource="0" file="../libcups/cups/json.c"/>
+        <FILE id="rE6CIc" name="json.h" compile="0" resource="0" file="../libcups/cups/json.h"/>
+        <FILE id="IUu15l" name="jwt.c" compile="1" resource="0" file="../libcups/cups/jwt.c"/>
+        <FILE id="jVaJ7b" name="jwt.h" compile="0" resource="0" file="../libcups/cups/jwt.h"/>
+        <FILE id="SvZY7j" name="langprintf.c" compile="1" resource="0" file="../libcups/cups/langprintf.c"/>
+        <FILE id="xbz6JB" name="language.c" compile="1" resource="0" file="../libcups/cups/language.c"/>
+        <FILE id="TFL43L" name="language.h" compile="0" resource="0" file="../libcups/cups/language.h"/>
+        <FILE id="wOVtOF" name="libcups3.def" compile="0" resource="1" file="../libcups/cups/libcups3.def"/>
+        <FILE id="soK6GS" name="libcups3.rc" compile="0" resource="1" file="../libcups/cups/libcups3.rc"/>
+        <FILE id="C561TF" name="Makefile" compile="0" resource="1" file="../libcups/cups/Makefile"/>
+        <FILE id="rfS1ee" name="md5-internal.h" compile="0" resource="0" file="../libcups/cups/md5-internal.h"/>
+        <FILE id="kFW5OQ" name="md5.c" compile="1" resource="0" file="../libcups/cups/md5.c"/>
+        <FILE id="VdNT8A" name="notify.c" compile="1" resource="0" file="../libcups/cups/notify.c"/>
+        <FILE id="iRK1W2" name="options.c" compile="1" resource="0" file="../libcups/cups/options.c"/>
+        <FILE id="ENwGJC" name="ppd.h" compile="0" resource="0" file="../libcups/cups/ppd.h"/>
+        <FILE id="PoZhe2" name="pwg-media.c" compile="1" resource="0" file="../libcups/cups/pwg-media.c"/>
+        <FILE id="y4zw05" name="pwg-private.h" compile="0" resource="0" file="../libcups/cups/pwg-private.h"/>
+        <FILE id="la95x6" name="pwg.h" compile="0" resource="0" file="../libcups/cups/pwg.h"/>
+        <FILE id="eJ7R8N" name="rand.c" compile="1" resource="0" file="../libcups/cups/rand.c"/>
+        <FILE id="rYxDAK" name="raster-error.c" compile="1" resource="0" file="../libcups/cups/raster-error.c"/>
+        <FILE id="ougbFC" name="raster-private.h" compile="0" resource="0"
+              file="../libcups/cups/raster-private.h"/>
+        <FILE id="KMdUYW" name="raster-stream.c" compile="1" resource="0" file="../libcups/cups/raster-stream.c"/>
+        <FILE id="rtVIgV" name="raster-testpage.h" compile="0" resource="0"
+              file="../libcups/cups/raster-testpage.h"/>
+        <FILE id="EqOGPo" name="raster.h" compile="0" resource="0" file="../libcups/cups/raster.h"/>
+        <FILE id="dzgPxy" name="rasterbench.c" compile="1" resource="0" file="../libcups/cups/rasterbench.c"/>
+        <FILE id="oH0f5b" name="request.c" compile="1" resource="0" file="../libcups/cups/request.c"/>
+        <FILE id="LB3Coz" name="string-private.h" compile="0" resource="0"
+              file="../libcups/cups/string-private.h"/>
+        <FILE id="ERxbPZ" name="string.c" compile="1" resource="0" file="../libcups/cups/string.c"/>
+        <FILE id="qdCev2" name="tempfile.c" compile="1" resource="0" file="../libcups/cups/tempfile.c"/>
+        <FILE id="EX3CVl" name="test-internal.h" compile="0" resource="0" file="../libcups/cups/test-internal.h"/>
+        <FILE id="bhlJjW" name="test.ppd" compile="0" resource="1" file="../libcups/cups/test.ppd"/>
+        <FILE id="esDugg" name="test2.ppd" compile="0" resource="1" file="../libcups/cups/test2.ppd"/>
+        <FILE id="clqRsA" name="testarray.c" compile="1" resource="0" file="../libcups/cups/testarray.c"/>
+        <FILE id="vbPPyY" name="testclient.c" compile="1" resource="0" file="../libcups/cups/testclient.c"/>
+        <FILE id="ApXvMB" name="testcreds.c" compile="1" resource="0" file="../libcups/cups/testcreds.c"/>
+        <FILE id="HlbG2j" name="testcups.c" compile="1" resource="0" file="../libcups/cups/testcups.c"/>
+        <FILE id="spOnd1" name="testdest.c" compile="1" resource="0" file="../libcups/cups/testdest.c"/>
+        <FILE id="TEaROd" name="testdnssd.c" compile="1" resource="0" file="../libcups/cups/testdnssd.c"/>
+        <FILE id="urMx8f" name="testfile.c" compile="1" resource="0" file="../libcups/cups/testfile.c"/>
+        <FILE id="D0lkxS" name="testfile.txt" compile="0" resource="1" file="../libcups/cups/testfile.txt"/>
+        <FILE id="aPQvy2" name="testform.c" compile="1" resource="0" file="../libcups/cups/testform.c"/>
+        <FILE id="UlpQLN" name="testgetdests.c" compile="1" resource="0" file="../libcups/cups/testgetdests.c"/>
+        <FILE id="fgN47f" name="testhash.c" compile="1" resource="0" file="../libcups/cups/testhash.c"/>
+        <FILE id="XyD8cz" name="testhttp.c" compile="1" resource="0" file="../libcups/cups/testhttp.c"/>
+        <FILE id="nczw5p" name="testi18n.c" compile="1" resource="0" file="../libcups/cups/testi18n.c"/>
+        <FILE id="LtaTga" name="testipp.c" compile="1" resource="0" file="../libcups/cups/testipp.c"/>
+        <FILE id="ZCiY3P" name="testjson.c" compile="1" resource="0" file="../libcups/cups/testjson.c"/>
+        <FILE id="jAY0Pr" name="testjwt.c" compile="1" resource="0" file="../libcups/cups/testjwt.c"/>
+        <FILE id="F8wOwL" name="testlang.c" compile="1" resource="0" file="../libcups/cups/testlang.c"/>
+        <FILE id="nY0Jcs" name="testoptions.c" compile="1" resource="0" file="../libcups/cups/testoptions.c"/>
+        <FILE id="yVbn27" name="testpwg.c" compile="1" resource="0" file="../libcups/cups/testpwg.c"/>
+        <FILE id="cPNy4B" name="testraster.c" compile="1" resource="0" file="../libcups/cups/testraster.c"/>
+        <FILE id="PQP6f4" name="testtestpage.c" compile="1" resource="0" file="../libcups/cups/testtestpage.c"/>
+        <FILE id="NyazEu" name="testthreads.c" compile="1" resource="0" file="../libcups/cups/testthreads.c"/>
+        <FILE id="VVYMUC" name="thread.c" compile="1" resource="0" file="../libcups/cups/thread.c"/>
+        <FILE id="ezIZ9w" name="thread.h" compile="0" resource="0" file="../libcups/cups/thread.h"/>
+        <FILE id="i3JpBk" name="tls-gnutls.c" compile="1" resource="0" file="../libcups/cups/tls-gnutls.c"/>
+        <FILE id="Dfe2yu" name="tls-openssl.c" compile="1" resource="0" file="../libcups/cups/tls-openssl.c"/>
+        <FILE id="JbMm7Q" name="tls.c" compile="1" resource="0" file="../libcups/cups/tls.c"/>
+        <FILE id="TPxFgn" name="tlscheck.c" compile="1" resource="0" file="../libcups/cups/tlscheck.c"/>
+        <FILE id="PC96oT" name="transcode.c" compile="1" resource="0" file="../libcups/cups/transcode.c"/>
+        <FILE id="UuzUfZ" name="transcode.h" compile="0" resource="0" file="../libcups/cups/transcode.h"/>
+        <FILE id="GfHSOc" name="usersys.c" compile="1" resource="0" file="../libcups/cups/usersys.c"/>
+        <FILE id="ZS43aH" name="utf8demo.txt" compile="0" resource="1" file="../libcups/cups/utf8demo.txt"/>
+        <FILE id="qxyEQz" name="util.c" compile="1" resource="0" file="../libcups/cups/util.c"/>
+      </GROUP>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX" extraDefs="_PAPPL_WIN32_PTHREAD_H_=0"
+               extraLinkerFlags="-lcups -lpappl.1 -lusb-1.0">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="ProperBadger" macOSDeploymentTarget="10.14"
+                       osxCompatibility="10.14 SDK" headerPath="/usr/local/include/;"
+                       libraryPath="/usr/local/lib;&#10;/opt/local/libexec/openssl3/lib/;&#10;/Users/abhishekshivakumar/Downloads/cups-2.3.6/cups;"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="ProperBadger"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../juce-dev/juce-7/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce-dev/juce-7/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../juce-dev/juce-7/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../juce-dev/juce-7/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce-dev/juce-7/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile" linuxExtraPkgConfig="pappl">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" headerPath="C:\Users\abhis\properbadger2\Builds\VisualStudio2022\packages\libpappl1_native.1.2.1\build\native\include;&#10;"
+                       libraryPath="C:\Users\abhis\properbadger2\Builds\VisualStudio2022\packages\libpappl1_native.1.2.1\build\native\lib\x64\Debug\;&#10;"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../juce"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce"/>
+        <MODULEPATH id="juce_events" path="../../juce"/>
+        <MODULEPATH id="juce_graphics" path="../../juce"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+    <VS2022 targetFolder="Builds/VisualStudio2022" extraLinkerFlags=" -lpappl"
+            extraDefs="_WIN32=1" extraCompilerFlags="g++">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" headerPath="C:\Users\abhis\pappl; C:\Users\abhis\libcups;"/>
+        <CONFIGURATION isDebug="0" name="Release" libraryPath="C:\Users\abhis\properbadger2\Builds\VisualStudio2022\packages\libpappl1_native.1.2.1\build\native\lib\x64\Debug\;&#10;"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_core" path="../../juce"/>
+        <MODULEPATH id="juce_data_structures" path="../../juce"/>
+        <MODULEPATH id="juce_events" path="../../juce"/>
+        <MODULEPATH id="juce_graphics" path="../../juce"/>
+        <MODULEPATH id="juce_gui_basics" path="../../juce"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>
