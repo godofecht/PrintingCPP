@@ -1,0 +1,25 @@
+# JUCE / Projucer build output
+Builds/*/build/
+Builds/*/x64/
+Builds/*/Win32/
+Builds/*/.vs/
+Builds/*/intermediate/
+Builds/**/DerivedData/
+*.o
+*.obj
+*.ipch
+*.pdb
+*.ilk
+*.exp
+*.VC.db
+*.VC.opendb
+
+# macOS
+.DS_Store
+
+# NuGet restore output
+Builds/**/packages/
+
+# Xcode per-user state
+*.xcuserdatad/
+*.xcuserstate
